@@ -3,71 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIツール完全ガイド 2026 — ToolHunt Asia | 最新AIツールを日本語で紹介</title>
-  <meta name="description" content="2026年最新のAIツールを日本語で紹介。ChatGPT、Midjourney、Claudeなど文章作成・画像生成・動画制作・コーディングに役立つAIツールをカテゴリ別に解説。">
-  <meta name="keywords" content="AIツール,人工知能,ChatGPT,Midjourney,画像生成,文章作成,おすすめ,無料,2026">
+  <title>AIツール完全ガイド 2026 | ToolHunt Asia — 無料・有料AIツールを日本語で紹介</title>
+  <meta name="description" content="2026年最新AIツールを日本語で厳選紹介。画像生成・動画編集・文章作成・翻訳音声・デザイン3D・おもしろAIまで、無料トライアル＆高還元Affiliateツールをカテゴリ別に解説。">
+  <meta name="keywords" content="AIツール,画像生成AI,動画編集AI,文章作成AI,無料AI,おすすめAI,2026,ChatGPT,Midjourney,Canva">
   <meta name="google-adsense-account" content="ca-pub-2733505400264889">
-  <meta property="og:title" content="AIツール完全ガイド 2026 — ToolHunt Asia">
-  <meta property="og:description" content="最新AIツールを日本語で紹介。文章作成・画像生成・動画制作に役立つツールをカテゴリ別に解説。">
+  <meta property="og:title" content="AIツール完全ガイド 2026 | ToolHunt Asia">
+  <meta property="og:description" content="最新AIツールを日本語で紹介。無料トライアル＆高還元Affiliate情報も。">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://toolhunt-asia.com/jp/">
   <link rel="alternate" hreflang="ja" href="https://toolhunt-asia.com/jp/">
   <link rel="alternate" hreflang="ko" href="https://toolhunt-asia.com/kr/">
+  <link rel="alternate" hreflang="en" href="https://toolhunt-asia.com/en/">
   <link rel="alternate" hreflang="x-default" href="https://toolhunt-asia.com/">
   <link rel="stylesheet" href="../css/style.css">
-  
-  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2733505400264889" crossorigin="anonymous"></script>
-  
-  <style>
-    .ad-banner { max-width:728px; margin:0 auto 2rem; padding:0 1rem; text-align:center; min-height:90px; background:var(--card-bg); border-radius:12px; display:flex; align-items:center; justify-content:center; color:var(--text-dim); font-size:0.8rem; }
-  </style>
 </head>
 <body>
-  <header>
+  <div id="notify-bar" class="notify-bar"></div>
+  
+  <header class="site-header">
     <div class="header-inner">
-      <div>
-        <span class="logo">ToolHunt Asia</span>
-        <span class="logo-sub">🇯🇵 AIツール完全ガイド</span>
-      </div>
-      <div class="lang-switch">
+      <a href="/" class="logo">Tool<span class="dot">Hunt</span> Asia</a>
+      <nav class="lang-nav">
         <a href="/jp/" class="active">🇯🇵 日本語</a>
         <a href="/kr/">🇰🇷 한국어</a>
+        <a href="/en/">🌐 EN</a>
         <a href="/">🏠</a>
-      </div>
+      </nav>
     </div>
   </header>
 
   <section class="hero">
-    <h1>🔍 2026年 最新AIツール完全ガイド</h1>
-    <p>文章作成・画像生成・動画制作・コーディング — あなたの仕事を加速するAIツールをカテゴリ別に紹介します。</p>
+    <h1>🔍 <span>最新AIツール</span>をスマートに発見</h1>
+    <p>世界中のAIツールを日本語で厳選紹介。あなたの創作・仕事を加速します。</p>
+    <div class="badge-row">
+      <span class="pill">🎁 無料トライアル多数</span>
+      <span class="pill">💰 高還元Affiliate</span>
+      <span class="pill">🆕 毎週更新</span>
+    </div>
   </section>
 
-  <div class="search-wrap">
-    <input type="text" id="search-input" placeholder="🔍 ツール名や用途で検索...（例：画像生成、翻訳）" autocomplete="off">
+  <div class="search-bar"><input type="text" id="search-input" placeholder="ツール名やカテゴリで検索…" autocomplete="off"></div>
+  <div class="cat-pills" id="category-filters"></div>
+
+  <div class="page-wrap">
+    <main class="main-content">
+      <h2 class="section-title" id="sec-hot"><span class="icon">🔥</span> 急上昇中のAIツール</h2>
+      <div id="hot-tools"></div>
+
+      <div style="text-align:center;margin:2rem 0;min-height:90px;background:var(--card);border:1px dashed var(--border);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:.8rem">📢 Google AdSense — 広告枠</div>
+
+      <h2 class="section-title" id="sec-high"><span class="icon">💰</span> 高還元Affiliateツール特集</h2>
+      <div id="high-commission-tools"></div>
+
+      <h2 class="section-title" id="sec-trial"><span class="icon">🎁</span> 無料トライアル実施中</h2>
+      <div id="free-trial-tools"></div>
+
+      <h2 class="section-title" id="sec-all"><span class="icon">📦</span> すべてのAIツール</h2>
+      <div id="all-tools"></div>
+    </main>
+
+    <aside class="sidebar">
+      <h4 id="sidebar-hot-title">今週の注目</h4>
+      <ul class="mini-list" id="sidebar-hot"></ul>
+      
+      <div class="ad-box">📢 Ad</div>
+
+      <h4 id="sidebar-new-title" style="margin-top:2rem">新着ツール</h4>
+      <ul class="mini-list" id="sidebar-new"></ul>
+    </aside>
   </div>
 
-  <div class="categories" id="category-filters"></div>
+  <div class="affiliate-bar">
+    ※ 当サイトの一部リンクはアフィリエイトリンクです。リンク経由の購入でサイト運営者が報酬を受け取る場合があります（ユーザーの負担は一切ありません）。<a href="/privacy/">詳細</a>
+  </div>
 
-  <div class="ad-banner">📢 広告スペース — Google AdSense</div>
-
-  <div class="count-bar" id="tool-count"></div>
-
-  <div class="tools-grid" id="tools-grid"></div>
-
-  <div class="ad-banner">📢 広告スペース — Google AdSense</div>
-
-  <footer>
-    <p><strong>ToolHunt Asia</strong> — アジア最大級のAIツール発見プラットフォーム</p>
-    <p>毎週新しいツールを追加中 · おすすめがあればお知らせください</p>
-    <p style="margin-top:0.5rem;">
-      <a href="/">Home</a> · 
-      <a href="/jp/">日本語</a> · 
-      <a href="/kr/">한국어</a>
-    </p>
-    <p style="margin-top:1rem;font-size:0.7rem;">
-      当サイトは広告およびアフィリエイトリンクにより運営されています。© 2026 ToolHunt Asia
-    </p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>ToolHunt Asia</h4>
+        <p style="color:var(--text2);font-size:.85rem;max-width:300px">日本と韓国のユーザー向けに最新AIツールを厳選紹介するナビゲーションサイトです。</p>
+      </div>
+      <div class="footer-col">
+        <h4>メニュー</h4>
+        <a href="/jp/">🇯🇵 日本語</a>
+        <a href="/kr/">🇰🇷 한국어</a>
+        <a href="/en/">🌐 English</a>
+      </div>
+      <div class="footer-col">
+        <h4>規約</h4>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="/privacy/">アフィリエイト開示</a>
+        <a href="/privacy/">免責事項</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 ToolHunt Asia. All rights reserved.</div>
   </footer>
 
   <script src="../js/tools.js"></script>

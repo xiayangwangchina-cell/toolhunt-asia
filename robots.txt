@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://toolhunt-asia.com/sitemap.xml

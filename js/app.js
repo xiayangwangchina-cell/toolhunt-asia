@@ -68,16 +68,16 @@
     if (t.highCommission) badges.push(`<span class="tag tag-commission">💰 ${lang==='jp'?'高還元':'High'}</span>`);
     if (t.freeTrial) badges.push(`<span class="tag tag-free">🎁 ${lang==='jp'?'無料お試し':'Trial'}</span>`);
     
-    return `<div class="tool-card">
+    return `<div class="tool-card" data-tool="${t.name}" data-cat="${t.cat}" data-lang="${lang}">
       ${t.highCommission ? '<span class="commission-hint">Affiliate</span>' : ''}
       <div class="top-row">
-        <h3><a href="${t.url}" target="_blank" rel="nofollow sponsored">${t.name}</a></h3>
+        <h3><a href="${t.url}" target="_blank" rel="nofollow sponsored" data-action="name_click">${t.name}</a></h3>
         <div class="tags">${badges.join('')}</div>
       </div>
       <p class="desc">${desc(t)}</p>
       <div class="footer-row">
         <span class="price">${t.price}</span>
-        <a href="${t.url}" target="_blank" rel="nofollow sponsored" class="cta">${L.cta} →</a>
+        <a href="${t.url}" target="_blank" rel="nofollow sponsored" class="cta" data-action="cta_click">${L.cta} →</a>
       </div>
       <p class="affiliate-note">${L.affiliateNote}</p>
     </div>`;
@@ -145,4 +145,55 @@
   
   // Initial render
   renderAll();
+
+  // ── GA4 Click Tracking ──
+  document.addEventListener('click', function(e) {
+    if (typeof gtag !== 'function') return;
+    var link = e.target.closest('a[data-action]');
+    if (link) {
+      var card = link.closest('.tool-card');
+      var tool = card ? card.dataset.tool : '';
+      var cat = card ? card.dataset.cat : '';
+      var pageLang = card ? card.dataset.lang : '';
+      gtag('event', 'tool_click', {
+        tool_name: tool,
+        tool_category: cat,
+        action_type: link.dataset.action,
+        page_language: pageLang,
+        page_path: window.location.pathname
+      });
+    }
+  });
+
+  // ── Category Filter Tracking ──
+  if (catContainer) {
+    catContainer.addEventListener('click', function(e) {
+      if (typeof gtag !== 'function') return;
+      var btn = e.target.closest('.cat-pill');
+      if (btn) {
+        gtag('event', 'category_filter', {
+          category: btn.textContent.trim(),
+          page_path: window.location.pathname
+        });
+      }
+    });
+  }
+
+  // ── Search Tracking (debounced) ──
+  if (searchInput) {
+    var searchTimer;
+    searchInput.addEventListener('input', function() {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(function() {
+        if (typeof gtag !== 'function') return;
+        var q = searchInput.value.trim();
+        if (q.length >= 3) {
+          gtag('event', 'search', {
+            search_term: q,
+            page_path: window.location.pathname
+          });
+        }
+      }, 2000);
+    });
+  }
 })();

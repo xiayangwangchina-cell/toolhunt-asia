@@ -54,6 +54,30 @@
   <div class="search-bar"><input type="text" id="search-input" autocomplete="off"></div>
   <div class="cat-pills" id="category-filters"></div>
 
+  <style>
+    .content-nav{max-width:1200px;margin:0 auto;padding:0 1rem 0.5rem}
+    .content-nav h2{font-size:1.15rem;margin-bottom:.75rem;color:var(--text)}
+    .content-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.6rem}
+    .content-card{display:flex;align-items:center;gap:.6rem;padding:.75rem .9rem;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);text-decoration:none;color:var(--text);transition:all .2s}
+    .content-card:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+    .content-card .icon{font-size:1.2rem;flex-shrink:0}
+    .content-card .info{flex:1;min-width:0}
+    .content-card .info .title{font-weight:600;font-size:.85rem;line-height:1.3}
+    .content-card .info .tag{font-size:.68rem;color:var(--text3);margin-top:.1rem}
+    @media(max-width:768px){.content-grid{grid-template-columns:1fr}}
+  </style>
+  <div class="content-nav">
+    <h2>📝 Articles & Guides</h2>
+    <div class="content-grid">
+      <a href="/en/compare/ai-subtitle.html" class="content-card"><span class="icon">📊</span><div class="info"><div class="title">AI Subtitle Tools: Top 5 Compared</div><div class="tag">Comparison</div></div></a>
+      <a href="/en/compare/ai-video.html" class="content-card"><span class="icon">🎬</span><div class="info"><div class="title">AI Video Generation Tools: Top 5 Compared</div><div class="tag">Comparison</div></div></a>
+      <a href="/en/compare/ai-voice.html" class="content-card"><span class="icon">🎤</span><div class="info"><div class="title">AI Voice & TTS Tools: Top 5 Compared</div><div class="tag">Comparison</div></div></a>
+      <a href="/en/workflow/vtuber.html" class="content-card"><span class="icon">🤖</span><div class="info"><div class="title">VTuber AI Tools: Complete Guide</div><div class="tag">Workflow</div></div></a>
+      <a href="/en/workflow/ecommerce.html" class="content-card"><span class="icon">🛒</span><div class="info"><div class="title">K-Ecommerce AI Automation Workflow</div><div class="tag">Workflow</div></div></a>
+      <a href="/en/workflow/youtube-shorts.html" class="content-card"><span class="icon">📱</span><div class="info"><div class="title">YouTube Shorts AI Creation Guide</div><div class="tag">Workflow</div></div></a>
+    </div>
+  </div>
+
   <div class="page-wrap">
     <main class="main-content">
       <h2 class="section-title" id="sec-hot"><span class="icon">🔥</span></h2>

@@ -145,7 +145,7 @@ const TOOLS_DATA = [
     descKR:"업계 최고 정밀도의 번역 AI. 한국어→영어는 타의 추종을 불허. 문서 전체 번역 가능.",
     descEN:"Industry-leading translation AI. Unmatched JP→EN quality. Full document translation.",
     price:"無料/$10.49月", isFree:true, hot:false, highCommission:false, freeTrial:true },
-  { id:14, name:"ElevenLabs", url:"https://elevenlabs.io", cat:"🎵 翻訳音声", catKR:"🎵 번역 음성", catEN:"🎵 Voice/Trans",
+  { id:14, name:"ElevenLabs", url:"https://try.elevenlabs.io/w3h5tk7mwd8o", cat:"🎵 翻訳音声", catKR:"🎵 번역 음성", catEN:"🎵 Voice/Trans",
     descJP:"超リアルな音声合成AI。日本語・韓国語対応、ナレーションや読み上げに最適。",
     descKR:"초현실적인 음성 합성 AI. 일본어·한국어 지원, 내레이션과 낭독에 최적.",
     descEN:"Ultra-realistic voice synthesis. Supports JP/KR — perfect for narration and TTS.",

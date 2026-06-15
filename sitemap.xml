@@ -27,4 +27,7 @@
   <url><loc>https://toolhunt-asia.com/jp/workflow/ai-dubbing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://toolhunt-asia.com/kr/workflow/ai-dubbing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://toolhunt-asia.com/en/workflow/ai-dubbing.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://toolhunt-asia.com/jp/compare/ai-dubbing-voices.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://toolhunt-asia.com/kr/compare/ai-dubbing-voices.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://toolhunt-asia.com/en/compare/ai-dubbing-voices.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
